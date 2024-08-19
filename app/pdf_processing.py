@@ -2,7 +2,6 @@ import re
 import requests
 import PyPDF2
 import nltk
-from nltk.tokenize import sent_tokenize
 
 nltk.download('punkt')
 

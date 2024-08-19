@@ -7,3 +7,5 @@ nltk
 transformers
 PyPDF2
 torch
+pytest
+httpx
