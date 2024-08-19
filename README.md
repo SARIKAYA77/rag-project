@@ -54,10 +54,15 @@ To set up the project using Docker, follow these steps:
     GET /results: Returns the last results from the previous query
 
 **Example:**
-    __1.POST /ask:__
+
+_1.POST /ask:_
+```
 curl -X POST "http://localhost:8000/ask" -H "Content-Type: application/json" -d '{"url": "http://example.com/document.pdf", "query": "Yapay zeka nedir?"}'
-    __2.GET /results:__
+```
+_2.GET /results:_
+```
 curl -X GET "http://localhost:8000/results"
+```
 
     
 
