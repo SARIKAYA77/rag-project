@@ -36,8 +36,8 @@ To set up the project using Docker, follow these steps:
    
 2. **Build and Run the Docker Container**:
 ```bash
-    docker build -t pdf-question-api .
-    docker run -d -p 8000:8000 pdf-question-api
+    docker build -t fastapi-rag-service  .
+    docker run -d -p 8000:8000 fastapi-rag-service 
 ```
 **Install the Dependencies**:
 ```
