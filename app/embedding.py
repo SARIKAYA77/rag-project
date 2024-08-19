@@ -1,11 +1,12 @@
-
 import torch
 from transformers import AutoTokenizer, AutoModel
+
 
 def load_model():
     tokenizer = AutoTokenizer.from_pretrained("dbmdz/bert-base-turkish-uncased")
     model = AutoModel.from_pretrained("dbmdz/bert-base-turkish-uncased")
     return tokenizer, model
+
 
 def embed_text(chunks: list) -> list:
     tokenizer, model = load_model()

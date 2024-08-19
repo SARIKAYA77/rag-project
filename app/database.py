@@ -21,8 +21,6 @@ def search_embeddings(chunks: list, embeddings: list, query_embedding: np.ndarra
         embedding = np.frombuffer(embedding, dtype=np.float32)
         similarity = cosine_similarity(embedding, query_embedding)
         similarities.append((similarity, chunks[i]))
-
-    # En yüksek 5 benzerlik skorunu al
     similarities.sort(reverse=True, key=lambda x: x[0])
 
     results = [

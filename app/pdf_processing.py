@@ -6,10 +6,12 @@ from nltk.tokenize import sent_tokenize
 
 nltk.download('punkt')
 
+
 def clean_text(text: str) -> str:
     text = text.encode('utf-8', 'ignore').decode('utf-8')
     text = re.sub(r'[^\w\sğüşıöçĞÜŞİÖÇ]', '', text)
     return text
+
 
 def download_pdf(url: str) -> str:
     response = requests.get(url)
@@ -17,6 +19,7 @@ def download_pdf(url: str) -> str:
     with open(pdf_file_path, "wb") as file:
         file.write(response.content)
     return pdf_file_path
+
 
 def extract_text_from_pdf(pdf_file_path: str) -> str:
     with open(pdf_file_path, "rb") as file:
@@ -26,6 +29,7 @@ def extract_text_from_pdf(pdf_file_path: str) -> str:
             page_text = page.extract_text()
             text += clean_text(page_text)
     return text
+
 
 def split_text_into_chunks(text: str, chunk_size: int = 100) -> list:
     words = text.split()
@@ -43,5 +47,3 @@ def find_relevant_chunks(chunks: list, query: str) -> list:
             relevant_chunks.append(chunk)
 
     return relevant_chunks
-
-
