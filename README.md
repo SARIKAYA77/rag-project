@@ -57,7 +57,7 @@ To set up the project using Docker, follow these steps:
 
 _1.POST /ask:_
 ```
-curl -X POST "http://localhost:8000/ask" -H "Content-Type: application/json" -d '{"url": "http://example.com/document.pdf", "query": "Yapay zeka nedir?"}'
+curl -X POST "http://localhost:8000/ask" -H "Content-Type: application/json" -d '{"url": "https://drive.google.com/uc?export=download&id=1p6PqK07fzTwupJmDXYoczn1hWpGnEUEj", "query": "Yapay zeka nedir?"}'
 ```
 _2.GET /results:_
 ```
