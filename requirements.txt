@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+requests
+pydantic
+redis
+nltk
+transformers
+PyPDF2
+torch
