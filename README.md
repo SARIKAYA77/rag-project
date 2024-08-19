@@ -49,14 +49,14 @@ To set up the project using Docker, follow these steps:
     uvicorn app.main:app --reload
 ```
 
-Usage:
+**Usage:**
     POST /ask: Takes a URL to a PDF and a query string, and returns the most relevant answers from the PDF content.
     GET /results: Returns the last results from the previous query
 
-Example:
-    1.POST /ask:
+**Example:**
+    __1.POST /ask:__
 curl -X POST "http://localhost:8000/ask" -H "Content-Type: application/json" -d '{"url": "http://example.com/document.pdf", "query": "Yapay zeka nedir?"}'
-    2.GET /results:
+    __2.GET /results:__
 curl -X GET "http://localhost:8000/results"
 
     
